@@ -1,6 +1,6 @@
 ﻿namespace ImpuestoEmpleado.DataAccess
 {
-    public class Class1
+    public interface IExportabl<T> where T : class
     {
 
     }
