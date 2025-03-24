@@ -11,6 +11,7 @@ namespace ImpuestoEmpleado.Domain.Models
         public decimal Impuesto { get; set; } = 0.15m;
         public string TipoEmpleado { get; } = "Por Contrato";
 
+        //Methods
         public EmpleadoPorContracto(string nombre, decimal salario)
         {
             Nombre = nombre;

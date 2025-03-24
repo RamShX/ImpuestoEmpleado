@@ -10,6 +10,7 @@ namespace ImpuestoEmpleado.Domain.Models
         public decimal Impuesto { get; set; } = 0.10m;
         public string TipoEmpleado { get;} = "Medio Tiempo";
 
+        //Methods
         public EmpleadoMedioTiempo(string nombre, decimal salario)
         {
             Nombre = nombre;
