@@ -8,8 +8,9 @@ namespace ImpuestoEmpleado.Domain.SaveStrategy
         private readonly string _path = "C:\\Users\\Lenovo\\source\\repos\\P2\\Ejercicio Strategy2\\ImpuestoEmpleado\\ImpuestoEmpleado.Domain\\ArchivoGuardado\\Empleado.xlsx";
         
         
-        public void Exportar(List<IEmpleado> empleados)
+        public void Exportar()
         {
+            List<IEmpleado> empleados = new List<IEmpleado>();
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (var excel = new ExcelPackage())
             {
