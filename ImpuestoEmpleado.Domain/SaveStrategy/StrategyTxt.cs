@@ -6,7 +6,7 @@ namespace ImpuestoEmpleado.Domain.SaveStrategy
     {
         public void Exportar(List<IEmpleado> empleados)
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
