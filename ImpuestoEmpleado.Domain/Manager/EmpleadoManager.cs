@@ -18,7 +18,8 @@ namespace ImpuestoEmpleado.Domain.Manager
             foreach (var e in Empleados)
             {
                 decimal impuesto = e.CalcularImpuesto(e.Salario);
-                Console.WriteLine($"Nombre: {e.Nombre} | Tipo de empleado: {e.TipoEmpleado} | Salario: {e.Salario} | Impuesto: {e.CalcularImpuesto(impuesto)}");
+                Console.WriteLine($"Nombre: {e.Nombre} | Tipo de empleado: {e.TipoEmpleado} | Salario: {e.Salario} | Impuesto: {impuesto.ToString("F2")}");
+                Console.WriteLine("==========================================================================================================================");
             }
         }
     }
