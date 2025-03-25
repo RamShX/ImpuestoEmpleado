@@ -2,8 +2,6 @@
 using ImpuestoEmpleado.Domain.Contexts;
 using ImpuestoEmpleado.Domain.Factories;
 using ImpuestoEmpleado.Domain.Interfeces;
-using ImpuestoEmpleado.Domain.Manager;
-
 namespace ImpuestoEmpleado.App
 {
     public class InstaciaApp
@@ -18,9 +16,8 @@ namespace ImpuestoEmpleado.App
                 Console.Clear();
                 Console.WriteLine("Menú");
                 Console.WriteLine("1. Agregar empleado");
-                Console.WriteLine("2. Mostrar empleado");
-                Console.WriteLine("3. Exportar Empleado");
-                Console.WriteLine("4. Salir");
+                Console.WriteLine("2. Exportar Empleado");
+                Console.WriteLine("3. Salir");
                 Console.WriteLine("Seleccione una opción: ");
                 int opcion = Convert.ToInt32(Console.ReadLine());
                 switch (opcion)
@@ -29,12 +26,9 @@ namespace ImpuestoEmpleado.App
                         AgregarEmpleado();
                         break;
                     case 2:
-
-                        break;
-                    case 3:
                         ExportarEmpleado();
                         break;
-                    case 4:
+                    case 3:
                         exit = false;
                         Console.WriteLine("Saliste");
                         break;
