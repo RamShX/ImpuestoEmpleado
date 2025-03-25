@@ -15,7 +15,7 @@ namespace ImpuestoEmpleado.App
             {
                 Console.Clear();
                 Console.WriteLine("Menú");
-                Console.WriteLine("1. Agregar empleado");
+                Console.WriteLine("1. Agregar empleado y ver el impuesto del empleado agregado");
                 Console.WriteLine("2. Exportar Empleado");
                 Console.WriteLine("3. Salir");
                 Console.WriteLine("Seleccione una opción: ");
@@ -67,7 +67,15 @@ namespace ImpuestoEmpleado.App
             try
             {
                 IEmpleado empleado = FactoryEmpleado.Create(nombre, salario, tipo);
-                _empleados.Add(empleado);
+                if(empleado != null)
+                {
+                    _empleados.Add(empleado);
+                }
+
+                ContextEmpleado context = new ContextEmpleado(empleado);
+
+                Console.WriteLine($"Nombre empleado: {empleado.Nombre}| impuesto del empleado: {context.CalcularImpuesto(empleado.Salario)}");
+
             }
             catch (Exception e)
             {
