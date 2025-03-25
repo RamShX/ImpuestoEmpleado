@@ -7,13 +7,20 @@ namespace ImpuestoEmpleado.Domain.Manager
     {
         public List<IEmpleado> Empleados { get; set; } = new List<IEmpleado>();
 
+        private IExportable _exportable;
+
+        public EmpleadoManager(IExportable exportable)
+        {
+            _exportable = exportable;
+        }
+
         public void AddEmpleado(IEmpleado empleado)
         {
             Empleados.Add(empleado);
             Console.WriteLine("Se agregó completamente el empleado");
         }
 
-        public void MostrarEmpleado() 
+        public void MostrarEmpleado()
         {
             foreach (var e in Empleados)
             {
@@ -22,5 +29,6 @@ namespace ImpuestoEmpleado.Domain.Manager
                 Console.WriteLine("==========================================================================================================================");
             }
         }
+
     }
 }

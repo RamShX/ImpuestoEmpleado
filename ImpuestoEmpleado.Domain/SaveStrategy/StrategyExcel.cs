@@ -6,11 +6,13 @@ namespace ImpuestoEmpleado.Domain.SaveStrategy
     class StrategyExcel : IExportable
     {
         private readonly string _path = "C:\\Users\\Lenovo\\source\\repos\\P2\\Ejercicio Strategy2\\ImpuestoEmpleado\\ImpuestoEmpleado.Domain\\ArchivoGuardado\\Empleado.xlsx";
-        
-        
+        private readonly List<IEmpleado> _empleados;
+        public StrategyExcel(List<IEmpleado> empleados)
+        {
+            _empleados = empleados;
+        }
         public void Exportar()
         {
-            List<IEmpleado> empleados = new List<IEmpleado>();
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (var excel = new ExcelPackage())
             {
@@ -24,7 +26,7 @@ namespace ImpuestoEmpleado.Domain.SaveStrategy
                 hoja.Cells["A1"].LoadFromArrays(headerRow);
 
                 int fila = 2;
-                foreach (var e in empleados)
+                foreach (var e in _empleados)
                 {
                     
                     hoja.Cells[fila, 1].Value = e.Nombre;

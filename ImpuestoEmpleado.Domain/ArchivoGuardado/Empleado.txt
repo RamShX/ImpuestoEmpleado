@@ -1,0 +1,4 @@
+Nombre | Tipo de empleado | Salario | Impuesto
+Fulano | Medio Tiempo | 30000 | 3000.00
+Maria | Por Contrato | 50000 | 7500.00
+Polanco | Tiempo Completo | 20000 | 5000.00

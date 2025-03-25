@@ -1,0 +1,20 @@
+[
+  {
+    "Nombre": "Fulano",
+    "TipoEmpleado": "Medio Tiempo",
+    "Salario": 30000,
+    "Impuesto": 3000.00
+  },
+  {
+    "Nombre": "Maria",
+    "TipoEmpleado": "Por Contrato",
+    "Salario": 50000,
+    "Impuesto": 7500.00
+  },
+  {
+    "Nombre": "Polanco",
+    "TipoEmpleado": "Tiempo Completo",
+    "Salario": 20000,
+    "Impuesto": 5000.00
+  }
+]

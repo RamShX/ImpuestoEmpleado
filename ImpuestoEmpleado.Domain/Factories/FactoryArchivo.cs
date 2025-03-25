@@ -5,18 +5,18 @@ namespace ImpuestoEmpleado.Domain.Factories
 {
     public class FactoryArchivo 
     {
-        public IExportable CrearExportable(string tipo)
+        public static IExportable CrearExportable(int tipo, List<IEmpleado> empleado)
         {
             switch (tipo)
             {
-                case "Excel":
-                    return new StrategyExcel();
-                case "Txt":
-                    return new StrategyTxt();
-                case "Json":
-                    return new StrategyJson();
+                case 1:
+                    return new StrategyExcel(empleado);
+                case 2:
+                    return new StrategyTxt(empleado);
+                case 3:
+                    return new StrategyJson(empleado);
                 default:
-                    return null;
+                    throw new ArgumentException("Exportación no válido");
             }
         }
     }
